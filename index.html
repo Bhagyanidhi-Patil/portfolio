@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhagyanidhi A Patil | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #7b2ff7;
+      --accent: #f107a3;
+      --text: #1c1c1c;
+      --bg-light: #fdf9ff;
+      --bg-white: #ffffff;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg-light);
+      color: var(--text);
+      transition: background 0.3s ease;
+    }
+    .welcome-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      text-align: center;
+      animation: fadeSlide 1s ease;
+    }
+    .welcome-screen h1 {
+      font-size: 3.8rem;
+      margin-bottom: 1rem;
+      animation: fadeUp 1s ease-in-out;
+    }
+    .welcome-screen p {
+      font-size: 1.6rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+      animation: fadeUp 1.3s ease-in-out;
+    }
+    .enter-btn {
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      color: var(--accent);
+      background: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, background 0.3s ease;
+      animation: fadeUp 1.6s ease-in-out;
+    }
+    .enter-btn:hover {
+      transform: scale(1.05);
+      background: #f0f0f0;
+    }
+    .portfolio-content {
+      display: none;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeSlide {
+      from {opacity: 0; transform: translateY(50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      font-size: 3rem;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      color: #f8f8f8;
+    }
+    section {
+      padding: 2rem;
+      max-width: 960px;
+      margin: 2rem auto;
+      background: var(--bg-white);
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      animation: fadeIn 1s ease-in-out;
+    }
+    h2 {
+      color: var(--primary);
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    footer {
+      background: #1c1c1c;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+    .contact a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function showPortfolio() {
+      document.getElementById('welcomeScreen').style.display = 'none';
+      document.getElementById('portfolioContent').style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <div class="welcome-screen" id="welcomeScreen">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hi, I'm Bhagyanidhi A Patil — a software developer who is passionate about building innovative solutions.</p>
+    <button class="enter-btn" onclick="showPortfolio()">Enter Portfolio</button>
+  </div>
+
+  <div class="portfolio-content" id="portfolioContent">
+    <header>
+      <h1>Bhagyanidhi A Patil</h1>
+      <p>Software Developer, C++/Python | HPE</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Dedicated software developer passionate about crafting high-quality, scalable, and user-centric software applications. Strong in problem-solving, programming, and building tools that improve business outcomes.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Work Experience</h2>
+      <div class="experience" style="margin-bottom: 2rem; animation: fadeUp 1s ease-in-out;">
+        <h3 style="color: var(--primary);">Software Engineer I - <span style="color: var(--accent);">Hewlett Packard Enterprise</span></h3>
+        <p><strong>Sept 2022 – Present</strong></p>
+        <ul>
+          <li><strong>Redfish API Development:</strong> Built secure and RESTful hardware management APIs using DMTF Redfish standards.</li>
+          <li><strong>libhpsrv Library:</strong> Enhanced C++ communication library for iLO systems; added advanced VNIC features.</li>
+          <li><strong>Python Modernization:</strong> Migrated Raiden Tool from Python 2 to Python 3 to improve compatibility and maintainability.</li>
+          <li><strong>System Integration:</strong> Integrated CCF with RDA using Python to reduce processing during upload failures.</li>
+          <li><strong>Metadata Handling:</strong> Replaced XML with JSON parsing for Gen12+ firmware in the CCF backend.</li>
+          <li><strong>Automation:</strong> Developed a vendor SPP management script, boosting efficiency by <strong>89%</strong>.</li>
+          <li><strong>Cross-Platform Support:</strong> Helped build the Management Component Pack for multiple OS distributions.</li>
+          <li><strong>Predictive Tooling:</strong> Built a Firmware Update Failure Prediction Tool with <strong>75–80%</strong> accuracy.</li>
+        </ul>
+      </div>
+      <div class="experience" style="animation: fadeUp 1.2s ease-in-out;">
+        <h3 style="color: var(--primary);">R&D Intern - <span style="color: var(--accent);">Hewlett Packard Enterprise</span></h3>
+        <p><strong>Mar 2022 – Aug 2022</strong></p>
+        <ul>
+          <li><strong>Signing System Automation:</strong> Built a Python-based signing helper for Code Signing Migration 5.0 to streamline file submission.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" style="animation: fadeUp 1s ease-in-out;">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong style="color: var(--primary);">Languages:</strong> <span style="color: var(--text);">Python, C++, C</span></li>
+        <li><strong style="color: var(--primary);">Concepts:</strong> <span style="color: var(--text);">DSA, REST APIs, Redfish, Linux, Ubuntu, AWS</span></li>
+        <li><strong style="color: var(--primary);">Tools:</strong> <span style="color: var(--text);">Git, JIRA, Postman, VS Code, PyCharm, Jupyter, Visual Studio</span></li>
+        <li><strong style="color: var(--primary);">Soft Skills:</strong> <span style="color: var(--text);">Teamwork, Time Management, Adaptability, Problem-solving</span></li>
+      </ul>
+    </section>
+
+    <section id="education" style="animation: fadeUp 1.2s ease-in-out;">
+      <h2>Education</h2>
+      <div class="education">
+        <h3 style="color: var(--primary);">B.E. in Electronics and Communication</h3>
+        <p><strong>Sri Jayachamarajendra College of Engineering, Mysuru</strong> <br> <em>(2018 – 2022)</em></p>
+        <p><strong>CGPA:</strong> <span style="color: var(--accent);">9.51/10</span></p>
+      </div>
+    </section>
+
+    <section id="awards" style="animation: fadeUp 1.3s ease-in-out;">
+      <h2>Awards & Recognitions</h2>
+      <div class="award">
+        <ul>
+          <li><strong style="color: var(--primary);">HPE Compute SW COE Special Award</strong></li>
+          <li><strong style="color: var(--primary);">Finalist</strong> – Ideathon 2.0 (IIC SJCE)</li>
+          <li><strong style="color: var(--primary);">Winner</strong> – CSFE Hackathon 2024 at HPE</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="contact">
+        📧 <a href="mailto:bhagyanidhi.patil2000@gmail.com">bhagyanidhi.patil2000@gmail.com</a><br />
+        🔗 <a href="https://www.linkedin.com/in/bhagyanidhi-patil-2707341b2/" target="_blank">LinkedIn</a><br />
+        🐙 <a href="https://github.com/Bhagyanidhi-Patil" target="_blank">GitHub</a>
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Bhagyanidhi A Patil. All rights reserved.
+    <button onclick="scrollToTop()" style="position: fixed; bottom: 30px; right: 30px; background: var(--primary); color: white; border: none; padding: 0.7rem 1.2rem; border-radius: 50%; font-size: 1.2rem; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">↑</button>
+  </footer>
+</body>
+</html>
